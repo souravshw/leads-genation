@@ -28,9 +28,6 @@ public class LeadController {
 
       if (keyword == null) {
         leadRepository.findAll().forEach(leads::add);
-      } else {
-        leadRepository.findByTitleContainingIgnoreCase(keyword).forEach(leads::add);
-        model.addAttribute("keyword", keyword);
       }
 
       model.addAttribute("leads", leads);
@@ -44,7 +41,6 @@ public class LeadController {
   @GetMapping("/leads")
   public String addLead(Model model) {
     Lead lead = new Lead();
-    lead.setPublished(true);
 
     model.addAttribute("lead", lead);
     model.addAttribute("pageTitle", "Create new Lead");
@@ -97,9 +93,8 @@ public class LeadController {
   @GetMapping("/leads/{id}/published/{status}")
   public String updateLeadPublishedStatus(@PathVariable("id") Integer id, @PathVariable("status") boolean published,
       Model model, RedirectAttributes redirectAttributes) {
-    try {
-      leadRepository.updatePublishedStatus(id, published);
 
+    try {
       String status = published ? "published" : "disabled";
       String message = "The Lead id=" + id + " has been " + status;
 

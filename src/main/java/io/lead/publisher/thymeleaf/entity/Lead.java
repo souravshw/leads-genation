@@ -10,73 +10,96 @@ public class Lead {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
-  @Column(length = 128, nullable = false)
-  private String title;
+  @Column(length = 256)
+  private String productId ;
 
   @Column(length = 256)
-  private String description;
+  private String price;
 
-  @Column(nullable = false)
-  private int level;
+  @Column(length = 256)
+  private String phoneNumber;
 
-  @Column
-  private boolean published;
+  @Column(length = 256)
+  private String email;
+
+  @Column(length = 256)
+  private String state;
+
+  @Column(length = 256)
+  private String lastName;
+
+  @Column(length = 256)
+  private String address;
+
+  @Column(length = 256)
+  private String jornayaLeadId;
+
+  @Column(length = 256)
+  private String zip;
+
+  @Column(length = 256)
+  private String firstName;
+
+  @Column(length = 256)
+  private String clickId;
+
+  @Column(length = 256)
+  private String tPar;
+
 
   public Lead() {
 
-  }
-
-  public Lead(String title, String description, int level, boolean published) {
-    this.title = title;
-    this.description = description;
-    this.level = level;
-    this.published = published;
   }
 
   public Integer getId() {
     return id;
   }
 
-  public void setId(Integer id) {
-    this.id = id;
+  public String getProductId() {
+    return productId;
   }
 
-  public String getTitle() {
-    return title;
+  public String getPrice() {
+    return price;
   }
 
-  public void setTitle(String title) {
-    this.title = title;
+  public String getPhoneNumber() {
+    return phoneNumber;
   }
 
-  public String getDescription() {
-    return description;
+  public String getEmail() {
+    return email;
   }
 
-  public void setDescription(String description) {
-    this.description = description;
+  public String getState() {
+    return state;
   }
 
-  public int getLevel() {
-    return level;
+  public String getLastName() {
+    return lastName;
   }
 
-  public void setLevel(int level) {
-    this.level = level;
+  public String getAddress() {
+    return address;
   }
 
-  public boolean isPublished() {
-    return published;
+  public String getJornayaLeadId() {
+    return jornayaLeadId;
   }
 
-  public void setPublished(boolean published) {
-    this.published = published;
+  public String getZip() {
+    return zip;
   }
 
-  @Override
-  public String toString() {
-    return "Lead [id=" + id + ", title=" + title + ", description=" + description + ", level=" + level
-        + ", published=" + published + "]";
+  public String getFirstName() {
+    return firstName;
   }
 
+  public String getClickId() {
+    return clickId;
+  }
+
+  public String gettPar() {
+    return tPar;
+  }
 }

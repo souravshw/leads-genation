@@ -13,9 +13,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Transactional
 public interface LeadRepository extends JpaRepository<Lead, Integer> {
-  List<Lead> findByTitleContainingIgnoreCase(String keyword);
 
-  @Query("UPDATE Lead t SET t.published = :published WHERE t.id = :id")
-  @Modifying
-  public void updatePublishedStatus(Integer id, boolean published);
 }

@@ -26,33 +26,26 @@
 
         <div class="p-3">
           <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="title">Title</label>
+            <label class="col-sm-3 col-form-label" for="productId">Product Id</label>
             <div class="col-sm-9">
-              <input type="text" th:field="*{title}" required minlength="2" maxlength="128" class="form-control"
-                id="title" />
+              <input type="text" th:field="*{productId}" required minlength="2" maxlength="128" class="form-control"
+                id="productId" />
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="description">Description</label>
+            <label class="col-sm-3 col-form-label" for="price">Price</label>
             <div class="col-sm-9">
-              <input type="text" th:field="*{description}" minlength="2" maxlength="256" class="form-control"
-                id="description" />
+              <input type="text" th:field="*{price}" minlength="2" maxlength="256" class="form-control"
+                id="price" />
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="level">Level</label>
+            <label class="col-sm-3 col-form-label" for="phoneNumber">Phone Number</label>
             <div class="col-sm-9">
-              <input type="number" step="1" th:field="*{level}" required min="1"
-                class="form-control" id="level" />
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-sm-3 form-check-label" for="published">Published</label>
-            <div class="col-sm-9">
-              <input type="checkbox" th:field="*{published}" />
+              <input type="phoneNumber" th:field="*{price}" minlength="2" maxlength="256" class="form-control"
+                     id="phoneNumber" />
             </div>
           </div>
 
