@@ -16,10 +16,8 @@ public class APIDetails {
     private String jornayaLeadId;
     private String zip;
     private String firstName;
-
     private String clickId;
     private String tPar;
-
     private String source;
 
     public String getURL() {
